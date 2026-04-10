@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ra'Mifi Artesanías — Muñecas Lele Otomíes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="logo.jpeg" alt="Ra'Mifi logo" width="56" height="56" />
+    <div class="brand-text">
+      <span class="brand-name">Ra'Mifi</span>
+    </div>
+  </a>
+
+  <div class="navbar-right">
+    <button class="cart-btn" onclick="toggleCart()" aria-label="Carrito de compras">
+      Carrito
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Overlay + Drawer -->
+<div class="nav-overlay" id="navOverlay" onclick="toggleDrawer()"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html" onclick="toggleDrawer()">Inicio</a></li>
+    <li><a href="index.html#productos" onclick="toggleDrawer()">Productos</a></li>
+    <li><a href="quienes.html" onclick="toggleDrawer()">Quiénes Somos</a></li>
+    <li><a href="historia.html" onclick="toggleDrawer()">Historia</a></li>
+    <li><a href="contacto.html" onclick="toggleDrawer()">Contáctanos</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<main>
+<section class="hero">
+  <div class="floating-flowers" id="flowers"></div>
+  <div class="hero-decoration tl">🌺</div>
+  <div class="hero-decoration tr">🌸</div>
+  <div class="hero-decoration bl">🌼</div>
+  <div class="hero-decoration br">💐</div>
+
+  <div class="hero-content">
+    <div class="hero-badge">✦ Hecho a mano con amor otomí ✦</div>
+    <h1>Muñecas <span>Lele</span><br/>Artesanales</h1>
+    <p>
+      Cada Lele es una obra única tejida con hilo y corazón por manos otomíes
+      de Amealco, Querétaro. Llevamos la tradición y el alma de nuestra cultura
+      directamente a tu hogar.
+    </p>
+    <a href="#productos" class="hero-cta">
+      🪆 Ver Colección
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════ PRODUCTOS ══════════════════ -->
+<section class="section" id="productos">
+  <h2 class="section-title">Nuestra <span>Colección</span></h2>
+  <div class="divider"></div>
+
+  <!-- Buscador -->
+  <div class="search-wrap">
+    <div class="search-box">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="searchInput" class="search-input" placeholder="Buscar muñeca..." oninput="filterProducts()" />
+      <button class="search-clear" id="searchClear" onclick="clearSearch()" aria-label="Limpiar">✕</button>
+    </div>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+
+    <!-- Producto 1 -->
+    <article class="product-card reveal" data-name="lele primavera flores colores cabello vestido multicolor">
+      <div class="product-img-wrap">
+        <img src="lele_flores.jpeg" alt="Lele Primavera" width="320" height="420" />
+        <div class="product-overlay">
+          <span class="product-overlay-text">🪆 Ver detalle</span>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Lele Primavera</h3>
+        <p class="product-desc">
+          Adornada con flores de colores en el cabello y un vibrante vestido
+          multicolor. Pura alegría otomí en cada punto de crochet.
+        </p>
+        <div class="product-footer">
+          <div class="product-price"><sup>$</sup>980</div>
+          <button class="add-to-cart" onclick="addToCart('Lele Primavera', 980, 'lele_flores.jpeg')">
+            + Agregar
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Producto 2 -->
+    <article class="product-card reveal" style="transition-delay:.15s" data-name="lele arcoiris copilli plumas bordado geometrico otomi">
+      <div class="product-img-wrap">
+        <img src="lele_arcoiris.jpeg" alt="Lele Arcoíris" width="320" height="420" />
+        <div class="product-overlay">
+          <span class="product-overlay-text">🪆 Ver detalle</span>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Lele Arcoíris</h3>
+        <p class="product-desc">
+          Porta el majestuoso copilli de plumas arcoíris y un exquisito vestido
+          con bordado geométrico otomí en tonos intensos.
+        </p>
+        <div class="product-footer">
+          <div class="product-price"><sup>$</sup>980</div>
+          <button class="add-to-cart" onclick="addToCart('Lele Arcoíris', 980, 'lele_arcoiris.jpeg')">
+            + Agregar
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Producto 3 -->
+    <article class="product-card reveal" style="transition-delay:.3s" data-name="lele sol sentada vestido rojo fiesta queretaro clasica">
+      <div class="product-img-wrap">
+        <img src="lele_sentada.jpeg" alt="Lele del Sol" width="320" height="420" />
+        <div class="product-overlay">
+          <span class="product-overlay-text">🪆 Ver detalle</span>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Lele del Sol</h3>
+        <p class="product-desc">
+          Con su pose serena y vestido rojo de fiesta, esta Lele sentada
+          irradia la calidez del sol de Querétaro en cada hilo tejido.
+        </p>
+        <div class="product-footer">
+          <div class="product-price"><sup>$</sup>980</div>
+          <button class="add-to-cart" onclick="addToCart('Lele del Sol', 980, 'lele_sentada.jpeg')">
+            + Agregar
+          </button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="no-results" id="noResults" style="display:none;">
+    <span>🔍</span>
+    <p>No se encontraron muñecas con ese nombre.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ QUIÉNES SOMOS (preview) ══════════════════ -->
+<section class="about-section">
+  <div class="about-inner" style="grid-template-columns:1fr;">
+    <div style="max-width:680px; margin:0 auto; text-align:center;">
+      <span class="about-badge">✦ Nuestra historia ✦</span>
+      <h2 class="about-title">El hilo que une<br/><span>cultura y corazón</span></h2>
+      <p class="about-text">
+        Ra'Mifi es una marca nacida en Amealco, Querétaro, en el corazón de la
+        comunidad otomí. Cada muñeca Lele es confeccionada por mujeres artesanas
+        que preservan siglos de técnica y tradición, usando materiales reciclados
+        y procesos sustentables.
+      </p>
+      <div class="about-values" style="max-width:480px; margin:0 auto 1.5rem;">
+        <div class="value-chip"><span class="vi">♻️</span> Sustentable</div>
+        <div class="value-chip"><span class="vi">🤲</span> Hecho a mano</div>
+        <div class="value-chip"><span class="vi">🌺</span> Cultura otomí</div>
+        <div class="value-chip"><span class="vi">💚</span> Comercio justo</div>
+      </div>
+      <a href="quienes.html" class="hero-cta" style="display:inline-flex; background: linear-gradient(135deg, var(--dorado), var(--dorado-l)); color: var(--chocolate);">
+        Conoce más →
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <p style="margin-bottom:.4rem;">
+    <strong style="color:var(--turquesa-l)">Ra'Mifi©</strong> — Amealco, Querétaro, México
+  </p>
+  <p style="opacity:.7; font-size:.8rem;">Donde el hilo une cultura y corazón · © 2026 Ra'Mifi. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ══════════════════ CARRITO ══════════════════ -->
+<div class="nav-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>🛍️ Tu Carrito</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <span class="empty-icon">🪆</span>
+      Tu carrito está vacío.<br/>¡Agrega una Lele!
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">$0</span>
+    </div>
+    <button class="cart-buy-btn" id="buyBtn" onclick="openConfirmModal()" disabled>
+      Comprar ahora
+    </button>
+  </div>
+</aside>
+
+<!-- Modal Confirmar -->
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal">
+    <span class="modal-icon">🪆</span>
+    <h3>¿Confirmar pedido?</h3>
+    <p>Estás a punto de realizar tu pedido de muñecas Lele artesanales.<br/>¿Deseas continuar?</p>
+    <div class="modal-btns">
+      <button class="btn-confirm" onclick="confirmOrder()">✓ Sí, confirmar</button>
+      <button class="btn-cancel" onclick="closeModal('confirmModal')">✕ No</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Éxito -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal">
+    <span class="modal-icon">🎉</span>
+    <h3>¡Pedido realizado exitosamente!</h3>
+    <p>
+      Gracias por tu compra. Nos comunicaremos contigo pronto para coordinar
+      el envío de tu(s) muñeca(s) Lele. ¡Que las disfrutes! 🌺
+    </p>
+    <div class="modal-btns">
+      <button class="btn-confirm" onclick="finishOrder()">¡Perfecto!</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">🪆 Producto agregado al carrito</div>
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script>
+/* ── Flores flotantes en hero ── */
+const emojis = ['🌺','🌸','🌼','💐','🌻','🌷','✿','❀'];
+const flowerWrap = document.getElementById('flowers');
+for (let i = 0; i < 18; i++) {
+  const el = document.createElement('span');
+  el.className = 'flower';
+  el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  el.style.cssText = `
+    left: ${Math.random() * 100}%;
+    animation-duration: ${6 + Math.random() * 8}s;
+    animation-delay: ${Math.random() * 8}s;
+    font-size: ${.8 + Math.random() * 1.2}rem;
+  `;
+  flowerWrap.appendChild(el);
+}
+
+/* ── Buscador ── */
+function filterProducts() {
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const cards = document.querySelectorAll('#productsGrid .product-card');
+  const clearBtn = document.getElementById('searchClear');
+  const noResults = document.getElementById('noResults');
+  let visible = 0;
+
+  clearBtn.style.display = q ? 'flex' : 'none';
+
+  cards.forEach(card => {
+    const keywords = card.dataset.name || '';
+    const name = card.querySelector('.product-name')?.textContent.toLowerCase() || '';
+    const matches = !q || keywords.includes(q) || name.includes(q);
+    card.style.display = matches ? '' : 'none';
+    if (matches) visible++;
+  });
+
+  noResults.style.display = visible === 0 ? 'block' : 'none';
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  filterProducts();
+}
+
+
+function toggleDrawer() {
+  const h = document.getElementById('hamburger');
+  const d = document.getElementById('navDrawer');
+  const o = document.getElementById('navOverlay');
+  h.classList.toggle('active');
+  d.classList.toggle('open');
+  o.classList.toggle('show');
+}
+
+/* ── Carrito state ── */
+let cart = [];
+
+function toggleCart() {
+  const cd = document.getElementById('cartDrawer');
+  const co = document.getElementById('cartOverlay');
+  cd.classList.toggle('open');
+  co.classList.toggle('show');
+}
+
+function addToCart(name, price, img) {
+  const existing = cart.find(i => i.name === name);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ name, price, img, qty: 1 });
+  }
+  renderCart();
+  showToast(`🪆 ${name} agregada al carrito`);
+}
+
+function changeQty(name, delta) {
+  const item = cart.find(i => i.name === name);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) cart = cart.filter(i => i.name !== name);
+  renderCart();
+}
+
+function removeItem(name) {
+  cart = cart.filter(i => i.name !== name);
+  renderCart();
+}
+
+function renderCart() {
+  const container = document.getElementById('cartItems');
+  const badge = document.getElementById('cartBadge');
+  const totalEl = document.getElementById('cartTotal');
+  const buyBtn = document.getElementById('buyBtn');
+
+  const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+  const totalPrice = cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+  badge.textContent = totalQty;
+  totalEl.textContent = `$${totalPrice.toLocaleString('es-MX')}`;
+  buyBtn.disabled = cart.length === 0;
+
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <div class="cart-empty">
+        <span class="empty-icon">🪆</span>
+        Tu carrito está vacío.<br/>¡Agrega una Lele!
+      </div>`;
+    return;
+  }
+
+  container.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <img class="cart-item-img" src="${item.img}" alt="${item.name}" />
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">$${(item.price * item.qty).toLocaleString('es-MX')}</div>
+      </div>
+      <div class="cart-item-controls">
+        <button class="qty-btn" onclick="changeQty('${item.name}', -1)">−</button>
+        <span class="qty-display">${item.qty}</span>
+        <button class="qty-btn" onclick="changeQty('${item.name}', 1)">+</button>
+        <button class="cart-remove" onclick="removeItem('${item.name}')" title="Eliminar">🗑</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ── Modales ── */
+function openConfirmModal() {
+  document.getElementById('confirmModal').classList.add('show');
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('show');
+}
+
+function confirmOrder() {
+  closeModal('confirmModal');
+  setTimeout(() => {
+    document.getElementById('successModal').classList.add('show');
+  }, 200);
+}
+
+function finishOrder() {
+  closeModal('successModal');
+  cart = [];
+  renderCart();
+  toggleCart();
+}
+
+/* ── Toast ── */
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+/* ── Scroll reveal ── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

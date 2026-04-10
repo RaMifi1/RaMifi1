@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes Somos — Ra'Mifi Artesanías</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="quienes.css" />
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="logo.jpeg" alt="Ra'Mifi logo" width="56" height="56" />
+    <div class="brand-text">
+      <span class="brand-name">Ra'Mifi</span>
+    </div>
+  </a>
+  <div class="navbar-right">
+    <button class="cart-btn" onclick="window.location.href='index.html'" aria-label="Ir a tienda">
+      Tienda
+    </button>
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay" onclick="toggleDrawer()"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html" onclick="toggleDrawer()">Inicio</a></li>
+    <li><a href="index.html#productos" onclick="toggleDrawer()">Productos</a></li>
+    <li><a href="quienes.html" onclick="toggleDrawer()">Quiénes Somos</a></li>
+    <li><a href="historia.html" onclick="toggleDrawer()">Historia</a></li>
+    <li><a href="contacto.html" onclick="toggleDrawer()">Contáctanos</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<main>
+
+<section class="who-hero" style="padding-top:7rem;">
+  <div class="hero-badge" style="margin-bottom:1rem;">✦ Conoce Ra'Mifi ✦</div>
+  <h1>Quiénes <span>Somos</span></h1>
+  <p>Tradición otomí, calidad artesanal y compromiso con el mundo</p>
+</section>
+
+<!-- Tabs -->
+<nav class="tabs-nav">
+  <a href="#mision" class="tab-link active" onclick="setTab(this)">Misión y Visión</a>
+  <a href="#calidad" class="tab-link" onclick="setTab(this)">Calidad</a>
+  <a href="#sostenibilidad" class="tab-link" onclick="setTab(this)">Sostenibilidad</a>
+  <a href="#datos" class="tab-link" onclick="setTab(this)">Datos del Producto</a>
+</nav>
+
+<!-- ══════════════════ CONTENIDO ══════════════════ -->
+<div class="who-content">
+
+  <!-- MISIÓN Y VISIÓN -->
+  <div id="mision" class="mv-grid reveal">
+    <div class="mv-card">
+      <span class="mv-label">Misión</span>
+      <h3 class="mv-title">Lo que nos mueve</h3>
+      <p class="mv-text">
+        Diseñar, elaborar y exportar muñecas artesanales de Amealco con altos estándares de calidad,
+        preservando la riqueza cultural otomí y transmitiendo, a través de cada pieza, la esencia de
+        "donde el hilo une cultura y corazón", generando valor para nuestros clientes y bienestar
+        para las comunidades artesanas.
+      </p>
+    </div>
+    <div class="mv-card vision">
+      <span class="mv-label">Visión</span>
+      <h3 class="mv-title">A dónde vamos</h3>
+      <p class="mv-text">
+        Consolidarnos como una empresa líder en la exportación de muñecas artesanales de Amealco,
+        reconocida internacionalmente por su autenticidad, calidad e innovación, siendo un referente
+        en la preservación cultural y en la conexión entre tradiciones mexicanas y mercados globales.
+      </p>
+    </div>
+  </div>
+
+  <!-- CALIDAD -->
+  <div id="calidad" class="qs-section reveal">
+    <div class="qs-header">
+      <div class="qs-icon calidad">★</div>
+      <h2 class="qs-title">Calidad</h2>
+    </div>
+    <p class="qs-text">
+      En Ra'Mifi, cuna de tradición y arte textil, nuestra empresa de muñecas artesanales
+      se distingue por su compromiso con la calidad en cada detalle. Cada pieza es elaborada
+      a mano por artesanas locales, quienes preservan técnicas ancestrales transmitidas de
+      generación en generación, garantizando autenticidad y valor cultural.
+    </p>
+    <p class="qs-text">
+      La calidad de nuestras muñecas se refleja en la cuidadosa selección de materiales,
+      priorizando telas resistentes, hilos de alta durabilidad y procesos que aseguran
+      acabados impecables. Cada muñeca pasa por un riguroso proceso de revisión para
+      asegurar que cumple con estándares definidos en términos de confección, resistencia
+      y presentación.
+    </p>
+    <p class="qs-text">
+      Más que un producto, ofrecemos una representación viva de la identidad mexicana,
+      donde la calidad no solo se mide en lo físico, sino también en el respeto por la
+      tradición, el trabajo digno y el orgullo artesanal que distingue a Amealco a nivel
+      nacional e internacional.
+    </p>
+  </div>
+
+  <!-- SOSTENIBILIDAD -->
+  <div id="sostenibilidad" class="qs-section reveal">
+    <div class="qs-header">
+      <div class="qs-icon sostenibilidad">♻</div>
+      <h2 class="qs-title">Sostenibilidad</h2>
+    </div>
+    <p class="qs-text">
+      En Ra'Mifi, la sostenibilidad forma parte esencial de nuestra identidad como empresa
+      de muñecas artesanales. Nuestro compromiso va más allá de la elaboración de productos;
+      se enfoca en preservar el equilibrio entre la tradición, el entorno y el bienestar social.
+    </p>
+    <p class="qs-text">
+      Trabajamos bajo un modelo de producción responsable, utilizando materiales textiles de
+      bajo impacto ambiental y promoviendo el aprovechamiento eficiente de los recursos,
+      minimizando desperdicios en cada etapa del proceso. Asimismo, impulsamos prácticas
+      que favorecen la reducción de residuos y el consumo consciente.
+    </p>
+    <p class="qs-text">
+      En el ámbito social, fomentamos el desarrollo económico de las comunidades locales
+      mediante el empleo justo de artesanas, respetando sus conocimientos, tiempos y
+      condiciones laborales. Esto contribuye a la conservación del patrimonio cultural y
+      a la mejora de la calidad de vida de las familias involucradas.
+    </p>
+    <p class="qs-text">
+      Nuestra visión de sostenibilidad integra el respeto por el medio ambiente, la
+      responsabilidad social y la preservación de las tradiciones, asegurando que cada
+      muñeca no solo sea un símbolo cultural, sino también un producto elaborado de
+      manera ética y responsable.
+    </p>
+  </div>
+
+  <!-- DATOS DEL PRODUCTO -->
+  <div id="datos" class="reveal">
+    <h2 class="section-title" style="text-align:left; margin-bottom:1.5rem; font-size:1.5rem;">
+      Datos del <span style="color:var(--turquesa)">producto</span>
+    </h2>
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label">Marca</span>
+        <span class="dato-value">Ra'Mifi®</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Origen</span>
+        <span class="dato-value">Amealco, Querétaro, México</span>
+      </div>
+      <div class="dato-item" style="grid-column:1/-1">
+        <span class="dato-label">Materiales</span>
+        <span class="dato-value">Tela reciclada, listones de colores, bordado artesanal, cartón reciclado, plástico transparente mínimo</span>
+      </div>
+      <div class="dato-item" style="grid-column:1/-1">
+        <span class="dato-label">Elaboración</span>
+        <span class="dato-value">Producto artesanal confeccionado por mujeres otomíes, con técnicas tradicionales y enfoque sustentable</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="team-section">
+  <h2 class="team-title">Conoce nuestra <span>historia</span></h2>
+  <p class="team-sub">Cómo seis universitarios transformaron una tradición en un proyecto global</p>
+  <br/>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="historia.html" class="hero-cta" style="display:inline-flex;">
+      Leer historia
+    </a>
+    <a href="contacto.html" class="hero-cta" style="display:inline-flex; background:linear-gradient(135deg,var(--dorado),var(--dorado-l)); color:var(--chocolate);">
+      Contáctanos
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <p style="margin-bottom:.4rem;">
+    <strong style="color:var(--turquesa-l)">Ra'Mifi©</strong> — Amealco, Querétaro, México
+  </p>
+  <p style="opacity:.7; font-size:.8rem;">Donde el hilo une cultura y corazón · © 2026 Ra'Mifi. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script>
+function toggleDrawer() {
+  document.getElementById('hamburger').classList.toggle('active');
+  document.getElementById('navDrawer').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('show');
+}
+
+function setTab(el) {
+  document.querySelectorAll('.tab-link').forEach(function(t) {
+    t.classList.remove('active');
+  });
+  el.classList.add('active');
+}
+
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(function(el) {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

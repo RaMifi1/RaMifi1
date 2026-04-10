@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia — Ra'Mifi Artesanías</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="quienes.css" />
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <img src="logo.jpeg" alt="Ra'Mifi logo" width="56" height="56" />
+    <div class="brand-text">
+      <span class="brand-name">Ra'Mifi</span>
+    </div>
+  </a>
+  <div class="navbar-right">
+    <button class="cart-btn" onclick="window.location.href='index.html'" aria-label="Ir a tienda">
+      Tienda
+    </button>
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay" onclick="toggleDrawer()"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="index.html" onclick="toggleDrawer()">Inicio</a></li>
+    <li><a href="index.html#productos" onclick="toggleDrawer()">Productos</a></li>
+    <li><a href="quienes.html" onclick="toggleDrawer()">Quiénes Somos</a></li>
+    <li><a href="historia.html" onclick="toggleDrawer()">Historia</a></li>
+    <li><a href="contacto.html" onclick="toggleDrawer()">Contáctanos</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<main>
+
+<section class="historia-hero" style="padding-top:7rem;">
+  <div class="hero-badge" style="margin-bottom:1rem;">✦ 2026 · Amealco, Querétaro ✦</div>
+  <h1>Nuestra <span>Historia</span></h1>
+  <p>Cómo seis universitarios transformaron una tradición en un proyecto de impacto global</p>
+</section>
+
+<!-- ══════════════════ TIMELINE ══════════════════ -->
+<div class="historia-content">
+
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">El origen</span>
+      <h3 class="timeline-title">Una idea que cambió el rumbo</h3>
+      <p class="timeline-text">
+        En el año 2026, seis estudiantes de la licenciatura en Negocios Internacionales
+        coincidieron no solo en las aulas, sino también en una inquietud compartida:
+        transformar ideas en proyectos reales con impacto cultural y económico. Durante
+        el curso de Consultoría de Oportunidades de Negocio, surgió una pregunta que
+        cambiaría el rumbo de su formación académica: ¿cómo llevar un producto tradicional
+        mexicano al mercado global sin perder su esencia?
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">El equipo</span>
+      <h3 class="timeline-title">Distintas habilidades, una sola visión</h3>
+      <p class="timeline-text">
+        El equipo, conformado por jóvenes con distintas habilidades —comercio exterior,
+        marketing, finanzas y desarrollo de negocios— decidió enfocarse en un símbolo
+        representativo de la cultura mexicana: las muñecas artesanales de Amealco, Querétaro.
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">El descubrimiento</span>
+      <h3 class="timeline-title">Un patrimonio sin acceso al mundo</h3>
+      <p class="timeline-text">
+        Tras investigar su origen, comprendieron que estas muñecas no solo son productos
+        artesanales, sino un patrimonio cultural que representa la identidad otomí. Sin
+        embargo, también detectaron una problemática: muchos artesanos no cuentan con acceso
+        a mercados internacionales ni estrategias de comercialización modernas.
+      </p>
+      <p class="timeline-text">
+        Fue así como nació <strong>"RaMifi"</strong>, una empresa con el
+        propósito de conectar tradición y globalización.
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">El arranque</span>
+      <h3 class="timeline-title">Visitas, relaciones y comercio justo</h3>
+      <p class="timeline-text">
+        El proyecto inició con visitas a comunidades artesanales, donde establecieron
+        relaciones directas con productores locales, garantizando comercio justo y respeto
+        por los procesos tradicionales. Paralelamente, diseñaron un modelo de negocio
+        enfocado en la exportación, incorporando tendencias internacionales sin alterar la
+        esencia del producto.
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">El producto</span>
+      <h3 class="timeline-title">Autenticidad con proyección global</h3>
+      <p class="timeline-text">
+        Desarrollaron una línea de muñecas que conservaba su autenticidad, pero con
+        adaptaciones en empaques, certificaciones y branding, orientadas a mercados
+        extranjeros. Además, implementaron estrategias digitales para posicionar la marca,
+        resaltando el valor cultural detrás de cada pieza.
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">Los retos</span>
+      <h3 class="timeline-title">Obstáculos que forjaron el proyecto</h3>
+      <p class="timeline-text">
+        Durante el proceso, enfrentaron retos importantes: costos logísticos, regulaciones
+        internacionales y la necesidad de educar al consumidor extranjero sobre el valor
+        artesanal. Sin embargo, gracias a su formación en Negocios Internacionales y al
+        trabajo colaborativo, lograron estructurar un plan sólido y viable.
+      </p>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <span class="timeline-label">Hoy</span>
+      <h3 class="timeline-title">Más que un proyecto escolar</h3>
+      <p class="timeline-text">
+        Más que un proyecto escolar, Raíces de Amealco se convirtió en una propuesta de
+        emprendimiento con impacto social, demostrando que es posible generar oportunidades
+        económicas mientras se preserva la cultura.
+      </p>
+      <p class="timeline-text">
+        Hoy, los seis universitarios no solo presentan una empresa como resultado de su
+        asignatura, sino una visión: que cada muñeca cruzando fronteras lleve consigo una
+        historia, una tradición y el orgullo de México.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Cita cierre -->
+  <div class="historia-quote reveal">
+    <p>
+      Que cada muñeca cruzando fronteras lleve consigo una historia,
+      una tradición y el orgullo de México.
+    </p>
+    <cite>— Ra'Mifi · Negocios Internacionales, 2026</cite>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="team-section">
+  <h2 class="team-title">Conoce <span>más</span></h2>
+  <p class="team-sub">Descubre nuestra colección o contáctanos directamente</p>
+  <br/>
+  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+    <a href="index.html#productos" class="hero-cta" style="display:inline-flex;">
+      Ver colección
+    </a>
+    <a href="quienes.html" class="hero-cta" style="display:inline-flex; background:linear-gradient(135deg,var(--dorado),var(--dorado-l)); color:var(--chocolate);">
+      Quiénes somos
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <p style="margin-bottom:.4rem;">
+    <strong style="color:var(--turquesa-l)">Ra'Mifi©</strong> — Amealco, Querétaro, México
+  </p>
+  <p style="opacity:.7; font-size:.8rem;">Donde el hilo une cultura y corazón · © 2026 Ra'Mifi. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ══════════════════ SCRIPTS ══════════════════ -->
+<script>
+function toggleDrawer() {
+  document.getElementById('hamburger').classList.toggle('active');
+  document.getElementById('navDrawer').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('show');
+}
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
